@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+9dVtdFXT5n5BbuUf94Yh5F5uW5CO1F1fBbkz0mBtl9z9bf5" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: grey;
+        }
+        .calculator {
+            width: 400px;
+            margin: 0 auto;
+            padding: 60px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .btn-color {
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #addition {
+            border: solid black;
+            background-color: red;
+            color: black;
+        }
+        #subtraction {
+            border: solid black;
+            background-color: yellowgreen;
+            color: black;
+        }
+        #multiplication {
+            border: solid black;
+            background-color: green;
+            color: black;
+        }
+        #division {
+            border: solid black;
+            background-color: blue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+        <div class="mb-3">
+            <label for="Enter first number">Enter first number</label>
+            <input type="number" class="form-control" id="firstNumber" placeholder="Enter first number">
+        </div>
+        <div class="mb-3">
+            <label for="Enter second number">Enter Second Number</label>
+            <input type="number" class="form-control" id="secondNumber" placeholder="Enter second number">
+        </div>
+        <p>Result: <span id="result">0</span></p>
+        <button id="addition" class="btn btn-color" onclick="add()">Addition</button>
+        <button id="subtraction" class="btn btn-color" onclick="subtract()">Subtraction</button>
+        <button id="multiplication" class="btn btn-color" onclick="multiply()">Multiplication</button>
+        <button id="division" class="btn btn-color" onclick="divide()">Division</button>
+    </div>
+
+    <script>
+        function add() {
+            const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            const result = firstNumber + secondNumber;
+            document.getElementById('result').textContent = result;
+        }
+
+        function subtract() {
+            const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            const result = firstNumber - secondNumber;
+            document.getElementById('result').textContent = result;
+        }
+
+        function multiply() {
+            const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            const result = firstNumber * secondNumber;
+            document.getElementById('result').textContent = result;
+        }
+
+        function divide() {
+            const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            if (secondNumber === 0) {
+                alert("Division by zero is not allowed");
+                return;
+            }
+            const result = firstNumber / secondNumber;
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>

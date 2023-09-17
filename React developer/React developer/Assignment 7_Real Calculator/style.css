@@ -1,0 +1,69 @@
+#heading{
+    position: fixed;
+    top: 0;
+}
+
+
+.container{
+    display: flex;
+    
+    align-items: center;
+    
+    height: 100vh;
+    width: 100vw;
+    font-size: 20px;
+
+}
+
+.container-center{
+    
+    height: 70%;
+    width: 30%;
+    
+    position: relative;
+}
+
+form{
+    width: 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background-color: red;
+    height: 2rem;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+input{
+    width: 10rem;
+    
+}
+form button{
+    width: 5rem;
+}
+
+.key-container{
+    background-color:lightgray;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    height: 20rem;
+    width: 10.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.eq-container{
+    width: 5rem;
+    background-color: yellow;
+    height: 20rem;
+    position: absolute;
+    top: 2rem;
+     display: grid;
+     grid-template-columns: 1fr;
+    left: 10.5rem;
+    
+}
+
+
